@@ -39,7 +39,9 @@ end
 
 dir_config('mini_phone')
 
-$CXXFLAGS += ' -std=c++14 -ofast '
+$CXXFLAGS += ' -std=c++17 -ofast '
+$LDFLAGS << " -L/usr/local/opt/protobuf/lib"
+$CPPFLAGS << " -I/usr/local/opt/protobuf/include"
 
 create_makefile('mini_phone/mini_phone')
 
