@@ -12,7 +12,7 @@ if conf['target_cpu'] == 'arm64' && conf['target_os'].start_with?('darwin')
   $CXXFLAGS << ' -I/opt/homebrew/include '
 end
 
-unless have_library("phonenumber") && have_library("protobuf")
+unless have_library("phonenumber")
   abort <<~MSG
 
     ,----------------------------------------------------------------------,
